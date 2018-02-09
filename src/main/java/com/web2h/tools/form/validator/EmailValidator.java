@@ -7,8 +7,6 @@ import com.web2h.utils.form.validator.annotation.Email;
 
 public class EmailValidator implements ConstraintValidator<Email, String> {
 
-	private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{12,})$";
-
 	@Override
 	public void initialize(Email email) {
 	}
@@ -18,6 +16,6 @@ public class EmailValidator implements ConstraintValidator<Email, String> {
 		if (email == null || email.isEmpty()) {
 			return true;
 		}
-		return email.matches(EMAIL_PATTERN);
+		return email.split("@").length == 2;
 	}
 }
