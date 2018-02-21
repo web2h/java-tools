@@ -14,7 +14,10 @@ public class StringTools {
 
 	public static final String UNDERSCORE = "_";
 
-	/** Sets of characters excepted the confusing ones ('0', 'o', 'O', 'i', 'I', 'l'). */
+	/**
+	 * Sets of characters excepted the confusing ones ('0', 'o', 'O', 'i', 'I',
+	 * 'l').
+	 */
 	private static final String CHARACTER_SET_WITHOUT_CONFUSING_ONES = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789";
 	/** Max length for building a string with unique characters. */
 	private static final int MAX_LENGTH_FOR_UNIQUE_CHARACTER_STRING = 30;
@@ -24,7 +27,8 @@ public class StringTools {
 	 * 
 	 * @param string
 	 *            String to test
-	 * @return true if the given string contains only unique characters, false otherwise
+	 * @return true if the given string contains only unique characters, false
+	 *         otherwise
 	 */
 	public static boolean containsUniqueCharacters(String string) {
 		if (string == null) {
@@ -44,10 +48,12 @@ public class StringTools {
 	}
 
 	/**
-	 * Builds a random string containing only unique alphanumeric characters (no duplicates). We avoid '0', 'o', 'O', 'i', 'I', 'l' to avoid confusions.
+	 * Builds a random string containing only unique alphanumeric characters (no
+	 * duplicates). We avoid '0', 'o', 'O', 'i', 'I', 'l' to avoid confusions.
 	 * 
 	 * @param length
-	 *            Expected length of the string (must be positive and not exceed 30 to built a unique string easily)
+	 *            Expected length of the string (must be positive and not exceed 30
+	 *            to built a unique string easily)
 	 * @return The built string, null if the length is negative or zero
 	 */
 	public static String randomUniqueAlphanumeric(final int length) {
@@ -70,8 +76,13 @@ public class StringTools {
 		return randomString;
 	}
 
+	public static String buildRandomAlphanumeric(final int length) {
+		return RandomStringUtils.random(length, CHARACTER_SET_WITHOUT_CONFUSING_ONES);
+	}
+
 	/**
-	 * Turn into a java syntax the given string whose words are separated by the given separator. TEST_STRING will be transformed into testString.
+	 * Turn into a java syntax the given string whose words are separated by the
+	 * given separator. TEST_STRING will be transformed into testString.
 	 * 
 	 * @param source
 	 *            The string to transform
