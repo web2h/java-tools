@@ -76,7 +76,7 @@ public class StringTools {
 		return randomString;
 	}
 
-	public static String buildRandomAlphanumeric(final int length) {
+	public static String random(final int length) {
 		return RandomStringUtils.random(length, CHARACTER_SET_WITHOUT_CONFUSING_ONES);
 	}
 
