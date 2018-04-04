@@ -18,8 +18,10 @@ public final class DateTools {
 	/**
 	 * Adds x days to the given date.
 	 * 
-	 * @param date Date to which add the days
-	 * @param days Number of days to add
+	 * @param date
+	 *            Date to which add the days
+	 * @param days
+	 *            Number of days to add
 	 * @return Date with the x added days
 	 */
 	public static Date addDays(final Date date, final int days) {
@@ -29,8 +31,10 @@ public final class DateTools {
 	/**
 	 * Adds x minutes to the given date.
 	 * 
-	 * @param date Date to which add the minutes
-	 * @param minutes Number of minutes to add
+	 * @param date
+	 *            Date to which add the minutes
+	 * @param minutes
+	 *            Number of minutes to add
 	 * @return Date with the x added minutes
 	 */
 	public static Date addMinutes(final Date date, final int minutes) {
@@ -40,8 +44,10 @@ public final class DateTools {
 	/**
 	 * Adds x months to the given date.
 	 * 
-	 * @param date Date to which add the months
-	 * @param days Number of months to add
+	 * @param date
+	 *            Date to which add the months
+	 * @param days
+	 *            Number of months to add
 	 * @return Date with the x added months
 	 */
 	public static Date addMonths(final Date date, final int months) {
@@ -51,8 +57,10 @@ public final class DateTools {
 	/**
 	 * Adds x seconds to the given date.
 	 * 
-	 * @param date Date to which add the seconds
-	 * @param days Number of seconds to add
+	 * @param date
+	 *            Date to which add the seconds
+	 * @param days
+	 *            Number of seconds to add
 	 * @return Date with the x added seconds
 	 */
 	public static Date addSeconds(final Date date, final int seconds) {
@@ -62,8 +70,10 @@ public final class DateTools {
 	/**
 	 * Adds x years to the given date.
 	 * 
-	 * @param date Date to which add the years
-	 * @param days Number of years to add
+	 * @param date
+	 *            Date to which add the years
+	 * @param days
+	 *            Number of years to add
 	 * @return Date with the x added years
 	 */
 	public static Date addYears(final Date date, final int years) {
@@ -71,10 +81,31 @@ public final class DateTools {
 	}
 
 	/**
+	 * Returns a date at the start of the day.
+	 * 
+	 * @param date
+	 *            The date parameter
+	 * @return The date at the start of the day
+	 */
+	public static Date atStartOfDay(final Date date) {
+		if (date == null) {
+			return null;
+		}
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		calendar.set(Calendar.HOUR, 0);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND, 0);
+		return calendar.getTime();
+	}
+
+	/**
 	 * Converts a date given in string to a Date instance.
 	 * 
-	 * @param stringDate The date in string
-	 * @param format The format in which the date is
+	 * @param stringDate
+	 *            The date in string
+	 * @param format
+	 *            The format in which the date is
 	 * @return The Date instance, returns null if the parsing could not be done
 	 */
 	public static Date toDate(final String stringDate, final String format) {
@@ -90,7 +121,8 @@ public final class DateTools {
 	/**
 	 * Converts a date given in string to a Date instance using the default format (yyyy-MM-dd HH:mm:ss).
 	 * 
-	 * @param stringDate The date in string
+	 * @param stringDate
+	 *            The date in string
 	 * @return The Date instance, returns now if the parsing could not be done
 	 */
 	public static Date toDate(final String stringDate) {
@@ -100,7 +132,8 @@ public final class DateTools {
 	/**
 	 * Gives a string representation of a date following the default format yyyy/MM/dd HH:mm:ss
 	 * 
-	 * @param date The date to convert
+	 * @param date
+	 *            The date to convert
 	 * @return The string representation of the date
 	 */
 	public static String toString(Date date) {
@@ -110,8 +143,10 @@ public final class DateTools {
 	/**
 	 * Gives a string representation of a date following the given format
 	 * 
-	 * @param date The date to convert
-	 * @param format The format to follow for the conversion
+	 * @param date
+	 *            The date to convert
+	 * @param format
+	 *            The format to follow for the conversion
 	 * @return The string representation of the date
 	 */
 	public static String toString(Date date, String format) {
@@ -131,8 +166,10 @@ public final class DateTools {
 	/**
 	 * Removes x days from the given date.
 	 * 
-	 * @param date Date from which remove the days
-	 * @param days Number of days to remove
+	 * @param date
+	 *            Date from which remove the days
+	 * @param days
+	 *            Number of days to remove
 	 * @return Date with the x days removed
 	 */
 	public static Date removeDays(final Date date, final int days) {
@@ -142,8 +179,10 @@ public final class DateTools {
 	/**
 	 * Removes x minutes from the given date.
 	 * 
-	 * @param date Date from which remove the minutes
-	 * @param minutes Number of minutes to remove
+	 * @param date
+	 *            Date from which remove the minutes
+	 * @param minutes
+	 *            Number of minutes to remove
 	 * @return Date with the x removed minutes
 	 */
 	public static Date removeMinutes(final Date date, final int minutes) {
@@ -153,8 +192,10 @@ public final class DateTools {
 	/**
 	 * Removes x months from the given date.
 	 * 
-	 * @param date Date from which remove the months
-	 * @param months Number of months to remove
+	 * @param date
+	 *            Date from which remove the months
+	 * @param months
+	 *            Number of months to remove
 	 * @return Date with the x removed months
 	 */
 	public static Date removeMonth(final Date date, final int months) {
@@ -164,8 +205,10 @@ public final class DateTools {
 	/**
 	 * Removes x seconds from the given date.
 	 * 
-	 * @param date Date from which remove the seconds
-	 * @param seconds Number of seconds to remove
+	 * @param date
+	 *            Date from which remove the seconds
+	 * @param seconds
+	 *            Number of seconds to remove
 	 * @return Date with the x removed seconds
 	 */
 	public static Date removeSeconds(final Date date, final int seconds) {
@@ -175,8 +218,10 @@ public final class DateTools {
 	/**
 	 * Removes x years from the given date.
 	 * 
-	 * @param date Date from which remove the years
-	 * @param years Number of years to remove
+	 * @param date
+	 *            Date from which remove the years
+	 * @param years
+	 *            Number of years to remove
 	 * @return Date with the x removed years
 	 */
 	public static Date removeYears(final Date date, final int years) {
@@ -186,9 +231,12 @@ public final class DateTools {
 	/**
 	 * Adds/removes a amount of time (defined by calendarField) to/from the given date
 	 * 
-	 * @param date Date to be altered
-	 * @param calendarField Calendar field (day, month, minute, ...)
-	 * @param amount Amount of time to add or remove
+	 * @param date
+	 *            Date to be altered
+	 * @param calendarField
+	 *            Calendar field (day, month, minute, ...)
+	 * @param amount
+	 *            Amount of time to add or remove
 	 * @return The altered date (If the calendarField isn't recognized, return the input date)
 	 */
 	private static Date add(final Date date, final int calendarField, int amount) {

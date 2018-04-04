@@ -1,11 +1,11 @@
-package com.web2h.tools.form.validator;
+package com.web2h.tools.validation.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import com.web2h.utils.form.validator.annotation.Confirmation;
+import com.web2h.tools.validation.Confirmation;
 
 public class ConfirmationValidator implements ConstraintValidator<Confirmation, Object> {
 	private String originalField;

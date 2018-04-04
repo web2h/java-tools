@@ -1,9 +1,9 @@
-package com.web2h.tools.form.validator;
+package com.web2h.tools.validation.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.web2h.utils.form.validator.annotation.Email;
+import com.web2h.tools.validation.Email;
 
 public class EmailValidator implements ConstraintValidator<Email, String> {
 
